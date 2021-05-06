@@ -1,0 +1,237 @@
+/*seletor global*/
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html, body {
+    font-family: helvetica, sans-serif;
+    font-size: 1rem;/*rem e uma medida relativa que se adapta ao tamanho da tela do navegador*/
+    color: #000000;
+    background-color: #f5f5f5;
+
+}
+/*estilo de tudo cabeçalho*/
+header nav {
+    background-color: #000;
+    padding: 10px 0;/*10px em cima e em baixo e 0 nas laterais*/
+}
+/*estilo da palavra SOBRE*/
+header nav .menu ul li a {
+    color: #fff;
+    text-decoration: none;/*tira a linha do href*/
+    font-weight: bold;/*deixa em negrito*/
+    font-size: 1.2rem;
+}
+
+header nav .logo {
+    color: #fff;
+    text-decoration: none;
+}
+/*formatação do SOBRE*/
+header nav .container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header .hero {
+    background-image: url("../imagens/imghero.jpg");
+    background-size: cover;/*a img se adequa ao tamanho da view*/
+    background-repeat: no-repeat;/*a imagem não repeti no fundo*/
+    background-position: center;/* a imagem fica centralizada*/
+    height: 300px;
+    /*desce pra o centro a barra de pesquisa(hero)*/
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*centraliza a barra de formulário*/
+header .hero #formSearch {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .hero #formSearch input {
+    width: 70vw;/*usa 70% da largura view*/
+    padding: 10px; /*pra todos os lados do input*/
+    border-radius: 8px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    text-align: center;
+
+}
+
+main {
+    margin: 20px 0px;/*20px em cima e embaixo e 0px nos lados*/ 
+}
+
+/*posicionamento dos produtos*/
+main .container .produtos {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+} 
+
+/*article {
+    width: 300px;
+}*/
+
+.produto {
+    background-color: #fff;
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+    transition: 0.3 ease;
+}
+
+.produto:hover {
+    background-color: #f5f5f5;
+}
+
+.produto img {
+    /* width: 300px;*/
+    /*height: 300px;*/
+    border-radius: 5px 5px 0px 0px;/*S.E.  S.D.  I.E.  I.D.*/ 
+    margin-bottom: 10px; 
+}
+
+/*estilo dos produtos*/
+main .container h3 {
+    font-size: 2rem;
+    margin-bottom: 20px;/*margem abaixo do h3*/
+}
+
+.produto h4 {
+    padding: 0px 20px; /*0px em cima e em baixo/20px nos lados*/
+    text-align: center;
+    font-size: 1.2rem;
+    margin-bottom: 5px;
+}
+
+.produto p {
+    padding: 0px 20px;
+    font-size: 1rem;
+}
+
+.produto button {
+    width: 50%;/*pega 50% do elemento pai(.prato)*/
+    margin: 20px auto;
+    padding: 10px;
+    font-weight: bold;/*negrito*/
+    border-radius: 5px;
+    border: 1px solid rgba(0, 0, 0, 0.5);
+    text-transform: uppercase;/*maiúsculas*/
+    background-color: #000;
+    color: #fff;
+    cursor: pointer;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+    transition: 0.5s ease;
+}
+
+.produto button:hover {
+    background-color: #dedede;
+    color: #000;
+}
+
+footer {
+    padding: 10px 0px;
+}
+
+footer .container {
+    text-align: center;
+    font-weight: bold;
+}
+
+.hero-sobre {
+    height: 300px;
+    background-color: #111;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/*centralizar o texto "Um pouco da historia de Mimos_de_Anita" dentro do container*/
+.hero-sobre .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+@media (min-width: 500px) {
+    main .container .pratos {
+        flex-direction: row;
+        justify-content: space-around;
+        flex-wrap: wrap;
+    }
+
+    main .container .pratos .prato {
+        width: 300px;
+    }
+}
+
+/* estilização do modal */
+.modal {
+    position: fixed;
+    width: 70%;
+    left: 15%;
+    top: 30%;
+    background: #fff;
+    padding: 40px;
+    border-radius: 8px;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.5);
+}
+
+/* Form product */
+.form-group {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 15px;
+}
+
+.form-control {
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid rgba(0,0 ,0 , 0.3);
+    background: #fff;
+    box-shadow: 1px 1px 3px rgba(0, 0, 0, 0.3);
+}
+
+.btn {
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    font-size: 1rem;
+    border-radius: 5px;
+    box-shadow: 1px 1px 5px rgba(0, 0, 0, 0.3);
+    cursor: pointer;
+}
+
+.btn:hover {
+    opacity: 0.05;
+}
+
+.btn-success {
+    background: green;
+    color: #fff;
+}
+
+.btn-danger {
+    background: red;
+    color: #fff;
+}
+
+/* ocultar o formulário modal*/
+.hide {
+    display: none;
+}
+
+.container {
+    width: 90vw;/*view width usa a largaura relativa da tela atual*/
+    margin: 0px auto;
+}

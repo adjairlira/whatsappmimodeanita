@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8"><!--permite renderizar com caracteres especiais(~, ^, `, ´, etc.)-->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"><!--habilita a responsividade do site-->
+    <link rel="shortcut icon" href="anita.ico" type="image/x-icon">
+    <link rel="stylesheet" href="css/style.css">
+    <title>Mimos de Anita - Moda Íntima e Roupas de Dormir | Mimos_de_Anita</title>
+</head>
+<body>
+    <!--cabeçalho-->
+    <header>
+        <nav><!--nav tag de navegação-->
+            <!--div é uma tag de divisao do layout-->
+            <div class="container"><!--a classe container centraliza, alinha as divs no bory-->
+                <a href="index.html" class="logo">
+                    <h1>Mimos_de_Anita</h1>
+                </a>
+                <div class="menu">
+                    <ul><!--cria uma lista não ordenada-->
+                        <li><!--cria itens para lista-->
+                            <a href="sobre.html">SOBRE</a>
+                        </li>
+
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!--criar barra de pesquisa -->
+        <section class="hero">
+            <div class="container">
+                <form id="formSearch">
+                    <input type="search" placeholder="O QUE DESEJA COMPRAR HOJE?" name="inputSearch" id="inputSearch">
+                </form>
+            </div>
+
+        </section>
+
+    </header>
+    <!--cria a área dos produtos-->
+    <main>
+        <div class="container">
+            <h3>Produtos</h3>
+
+            <section class="produtos" id="product-div"></section>
+
+            <div class="modal hide">
+                <form action="#" class="modal-form" id="form-product">
+                    <div class="form-group">
+                        <label for="title">Produto</label>
+                        <input type="text" name="title" id="title" class="form-control" placeholder="Ex.: Produto 01"required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="quantity">Quantidade</label>
+                        <input type="number" name="quantity" id="quantity" class="form-control" placeholder="Ex.: 1"required="required" min="1">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">Seu nome</label>
+                        <input type="text" name="name" id="name" class="form-control" placeholder="Ex.: Adjair Lira"required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="address">Endereço</label>
+                        <input type="text" name="address" id="address" class="form-control" placeholder="Ex.: Rua: Tal, nº x"required="required">
+                    </div>
+                    <div class="form-group">
+                        <label for="payment">Pagamento</label>
+                        <select name="payment" id="payment" class="form-control">
+                            <option value="dinheiro">Dinheiro</option>
+                            <option value="cartao">Crtão de crédito</option>
+                        </select>
+                    </div>
+
+                    <div class="btn-group">
+                        <button type="submit" class="btn btn-success">Finaizar pedido</button>
+                        <button type="button" class="btn btn-danger" onclick="modalTrigger()">Cancelar</button>
+                    </div>
+
+                </form>
+            </div>
+
+                <!--coloca as imagens dos produtos e suas descrições-->
+                <!--<article class="produto">
+                    <img src="imagens/imagem1.jpg" alt="produto 01">
+                    <h4>Produto 01</h4>
+                    <h4>R$ 10,00</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <button type="button">Comprar</button>
+                </article>
+                <article class="produto">
+                    <img src="imagens/imagem2.jpg" alt="produto 02">
+                    <h4>Produto 02</h4>
+                    <h4>R$ 15,00</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <button type="button">Comprar</button>
+                </article>
+                <article class="produto">
+                    <img src="imagens/imagem3.jpg" alt="produto 03">
+                    <h4>Produto 03</h4>
+                    <h4>R$ 20,00</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <button type="button">Comprar</button>
+                </article>
+                <article class="produto">
+                    <img src="imagens/imagem4.jpg" alt="produto 04">
+                    <h4>Produto 04</h4>
+                    <h4>R$ 30,00</h4>
+                    <p>Lorem ipsum dolor sit amet.</p>
+                    <button type="button">Comprar</button>
+                </article>-->
+
+            
+        </div>
+    </main>
+    
+    <footer>
+        <div class="container">
+            <p>Desenvolvido por Adjair Lira</p>
+        </div>
+    </footer>
+
+    <script src="javascript/produtos.js"></script>
+    <script src="javascript/app.js"></script>
+    
+</body>
+</html>
