@@ -69,9 +69,14 @@ main {
 
 /*posicionamento dos produtos*/
 main .container .produtos {
-    width: 300px;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
+    width: 100%;
+    float: left;
+    padding: 3% 4%;
+    
+
 } 
 
 /*article {
@@ -93,8 +98,8 @@ main .container .produtos {
 }
 
 .produto img {
-    /* width: 300px;*/
-    /*height: 300px;*/
+    /*width: 300px;
+    height: 300px;*/
     border-radius: 5px 5px 0px 0px;/*S.E.  S.D.  I.E.  I.D.*/ 
     margin-bottom: 10px; 
 }
@@ -162,14 +167,15 @@ footer .container {
     align-items: center;
 }
 
-@media (min-width: 500px) {
-    main .container .pratos {
+@media screen and (min-width: 600px) {
+    main .container .produtos {
         flex-direction: row;
         justify-content: space-around;
-        flex-wrap: wrap;
+        /*flex-wrap: wrap;*/
     }
 
-    main .container .pratos .prato {
+    main .container .produtos .produto {
+    
         width: 300px;
     }
 }
