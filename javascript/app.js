@@ -7,7 +7,7 @@ const loadProducts = (produtos, idDivParent) => {
             <article class="produto">
                 <img src="${produto.image}" alt="${produto.title}">
                 <h4>${produto.title}</h4>
-                <h4>R$ ${produto.value}</h4>
+                <h4>R$ ${produto.value.toFixed(2)}</h4>
                 <p>${produto.description}</p>
                 <button type="button" onclick="modalTrigger(${produto.id})">Quero comprar</button>
             </article>
@@ -39,7 +39,7 @@ const modalTrigger = (productId) => {
 }
 
 const whatsappLinkGenerator = (phoneNumber, productTitle, productQuantity, buyerName, BuyerAddress, buyerPayment) => `https://api.whatsapp.com/
-send?phone=${phoneNumber}&text=Olá eu quero:${productQuantity} ${productTitle} - Entregar para ${buyerName} no endereço: ${BuyerAddress} - A forma
+send?phone=${phoneNumber}&text=Olá eu quero:${productQuantity} ${productTitle} - Entregar para ${buyerName} - No endereço: ${BuyerAddress} - A forma
 de pagamento será: ${buyerPayment}`
 
 /*https://api.whatsapp.com/send?phone=5581983487307&text=Ol%C3%A1%2C%20eu%20quero%3A*/
@@ -62,7 +62,7 @@ const checkout = phoneNumber => {
     })
 }
 
-const search = (products, searchTerm) => products.filter(product => product.title.includes(`${searchTerm}.uppercase`) ||
+const search = (products, searchTerm) => products.filter (product => product.title.toLowerCase().includes(`${searchTerm}`)  ||
     product.description.includes(`${searchTerm}`))
 
 const loadSearch = (form, productsDivId) => {
