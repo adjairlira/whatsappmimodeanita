@@ -182,7 +182,7 @@ footer .container {
 
 /* estilização do modal */
 .modal {
-    position: absolute;
+    position: fixed;
     /*position: fixed;*/
     width: 70%;
     left: 15%;
